@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome](README.md)
+* [Welcome](product/GitBookREADME.md)
 
 ## Libraries and APIs
 
@@ -8,4 +8,4 @@
 
 ***
 
-* [Filesystem](filesystem.md)
+* [Filesystem](libraries-and-apis/filesystem.md)
