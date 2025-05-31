@@ -1,0 +1,3 @@
+structure:
+  readme: ./product/GitBookREADME.md
+  summary: ./product/SUMMARY.md
