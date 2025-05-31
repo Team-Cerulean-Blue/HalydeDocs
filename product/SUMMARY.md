@@ -5,3 +5,4 @@
 * [Libraries and APIs](../libraries-and-apis/README.md)
   * [Computer](../libraries-and-apis/computer.md)
   * [Filesystem](../libraries-and-apis/filesystem.md)
+  * [Raster](../libraries-and-apis/raster.md)
