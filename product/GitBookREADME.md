@@ -24,5 +24,5 @@ Welcome to the Halyde documentation! Here you will find useful information for d
 
 ### Jump right in
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Libraries and APIs</strong></td><td></td><td></td><td></td><td><a href="../libraries-and-apis/">libraries-and-apis</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="../libraries-and-apis/">libraries-and-apis</a></td><td></td><td></td><td><a href="../libraries-and-apis/">libraries-and-apis</a></td></tr></tbody></table>
 
