@@ -1,5 +1,7 @@
 ---
-description: List of ANSI commands that are currently available in Halyde.
+description: >-
+  List of ANSI escape sequences that are currently available in Halyde and other
+  related information.
 icon: typewriter
 ---
 
@@ -39,7 +41,7 @@ Command: `\x1b[*m` where \* are the arguments.
 * [ ] Cursor Position (`\x1b[*H`)
 * [ ] Horizontal Vertical Position (`\x1b[*f`)
 
-It is recommended to change the `termlib.cursorPosX` and `termlib.cursorPosY` values instead of using ANSI escape codes (see [Terminal](terminal.md)).
+It is recommended to change the `termlib.cursorPosX` and `termlib.cursorPosY` values instead of using ANSI escape codes (see [Terminal](libraries-and-apis/terminal.md)).
 
 ***
 
@@ -57,5 +59,5 @@ It is recommended to change the `termlib.cursorPosX` and `termlib.cursorPosY` va
 * [x] Bell (`\x07` or `\a` )
 * [ ] Backspace (`\x08`)
 * [ ] Tab (`\x09`)
-* [x] Line Feed (`\x0A` or `\n`)
-* [ ] Carriage Return (`\x0D` or `\r`)
+* [x] Line Feed (`\x0A` or )
+* [ ] Carriage Return (`\x0D` or )

@@ -5,6 +5,8 @@ icon: files
 
 # Filesystem
 
+The `filesystem` library allows for interacting with `filesystem` components more easily and properly processing paths.
+
 `filesystem.absolutePath(path: string): string, string`\
 Returns the address of the filesystem component that `path` leads to and the absolute path in said filesystem component.
 
@@ -29,7 +31,7 @@ Returns a table of all objects at `path`, if it is a directory. Directories are 
 `filesystem.makeDirectory(path: string): boolean or nil, string`\
 Creates a directory at `path`. Returns `nil` and an error message if an error occurred.
 
-`filesystem.open(path: string[, mode: string]): table or nil, string`\
+`filesystem.open(path: string, [mode: string]): table or nil, string`\
 Opens a file at `path` for reading/writing. `mode` defaults to `r`. Possible modes are `r`, `rb`, `w`, `wb`, `a` and `ab`. Returns a file stream - a table with 3 functions. Returns `nil` and an error message if an error occurred.
 
 * `stream:read(amount: number): string or nil, string`\

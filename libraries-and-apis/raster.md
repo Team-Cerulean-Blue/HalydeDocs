@@ -5,8 +5,13 @@ icon: alien-8bit
 
 # Raster
 
-`raster.init()`\
-Initializes the `raster` library and a render buffer for it.
+The `raster` library is a library for creating pixel-based graphics in Halyde. Since OpenComputers graphics are text mode only, `raster` uses braille characters to represent pixels. The limitation of this is that there can only be 2 colors per character (or 2x4 pixel chunk): the foreground color and the background color.
+
+`raster.init(width: number, height: number, bgcolor: number)`\
+Initializes the `raster` library and a render buffer for it.\
+`width`: The width of the render buffer.\
+`height`: The height of the render buffer.\
+`bgcolor`: The background color of the render buffer.
 
 `raster.clear()`\
 Clears the `raster` render buffer.
@@ -14,8 +19,8 @@ Clears the `raster` render buffer.
 `raster.units.charToBraille(x: number, y: number): number, number`\
 Converts `x` and `y` in text characters to `x` and `y` in pixels and returns them.
 
-`raster.units.charToBraille(x: number, y: number): number, number`\
-Converts `x` and `y` in text characters to `x` and `y` in pixels and returns them.
+`raster.units.brailleToChar(x: number, y: number): number, number`\
+Converts `x` and `y` in pixels to `x` and `y` in text characters and returns them.
 
 `raster.set(x: number, y: number, color: number): boolean`\
 Sets a pixel at `x` and `y` to be of `color`. `color` must be in hex. Returns false if `x` and `y` are out of bounds.
