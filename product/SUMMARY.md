@@ -9,5 +9,6 @@
   * [Filesystem](../libraries-and-apis/filesystem.md)
   * [Raster](../libraries-and-apis/raster.md)
   * [Terminal](../libraries-and-apis/terminal.md)
+  * [Unicode](../libraries-and-apis/unicode.md)
 * [ANSI Compatibility](../ansi-compatibility.md)
 * [Drivers](../drivers.md)

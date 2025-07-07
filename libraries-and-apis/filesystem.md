@@ -38,8 +38,20 @@ Opens a file at `path` for reading/writing. `mode` defaults to `r`. Possible mod
   Tries to read the specified number of bytes from the file stream. Returns `nil` and an error message if an error occurred.
 * `stream:write(data: string): boolean or nil, string`\
   Writes `data` to the file stream. Returns `nil` and an error message if an error occurred.
+* `stream:readBytes(n: number): number or nil` \
+  Returns the unsigned integer of a specific number of bytes, in big endian.\
+  If `n` is 1, then it will return one byte from the file as a number.
+* `stream:readUnicodeChar(): string` \
+  Reads an Unicode character, and returns it.
+* `stream:iterateBytes(): function` \
+  Returns an [iterator function](https://www.lua.org/pil/7.1.html) that returns a byte (`number`) when called. When the stream ends, it will automatically get closed.
+* `stream:iterateUnicodeChars(): function` \
+  Returns an [iterator function](https://www.lua.org/pil/7.1.html) that returns an Unicode character (`string`) when called. When the stream ends, it will automatically get closed.
 * `stream:close()`\
   Closes the file stream.
+
+`filesystem.makeReadStream(content: string): table` \
+Makes a new readable file stream with the specified content and returns it. (see `filesystem.open()`)
 
 `filesystem.remove(path: string): boolean or nil, string`\
 Removes the object at `path`. Returns `nil` and an error message if an error occurred.

@@ -13,11 +13,12 @@ Prints every argument into the screen. Any arguments that aren't a string will t
 `clear()`\
 Clears the entire screen, and resets the cursor position.
 
-`read([readHistoryType: string], [prefix: string], [defaultText: string]): string`\
+`read([readHistoryType: string], [prefix: string], [defaultText: string], [maxChars: number]): string`\
 Read keyboard input as text, until the user presses Enter.\
 `readHistoryType`: Type of history for the command. If you wish to have command history (where the up and down keys can scroll through it), use an unique ID. Otherwise, this can be left as nil.\
 `prefix` : Text to print before the user input. For example, the shell puts `/home/ >` as its prefix, and updates accordingly when the path changes.\
-`defaultText` : Default text to insert before any user input.
+`defaultText` : Default text to insert before any user input.\
+`maxChars` : The maximum amount of characters that can be inserted by the user. Please note that this uses an Unicode character count, and not the width of when it gets rendered.
 
 `termlib: table`\
 This is a global table that contains readable and writable values for directly interacting with the library.
