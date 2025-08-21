@@ -1,9 +1,9 @@
 ---
-description: Documentation of Halyde's driver system.
-icon: gear-code
+description: Documentation of the Halyde kernel's module system.
+icon: rectangles-mixed
 ---
 
-# Drivers
+# Modules
 
 Like any good operating system, Halyde has a driver system. Drivers are small scripts that run on system startup (or in other cases, but that functionality is coming soon) and can depend on other drivers. They are usually to add virtual components to allow the system to interface with some miscellaneous code better.\
 For example, there could be a driver that works with the filesystem on an unmanaged drive and creates a `filesystem` virtual component for each of such drives upon startup.\

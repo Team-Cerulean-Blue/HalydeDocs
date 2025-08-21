@@ -2,13 +2,21 @@
 
 * [Welcome](GitBookREADME.md)
 * [Table of contents](../SUMMARY.md)
-* [Libraries and APIs](../libraries-and-apis/README.md)
-  * [DataTools](../libraries-and-apis/datatools.md)
-  * [Component](../libraries-and-apis/component.md)
-  * [Computer](../libraries-and-apis/computer.md)
-  * [Filesystem](../libraries-and-apis/filesystem.md)
-  * [Raster](../libraries-and-apis/raster.md)
-  * [Terminal](../libraries-and-apis/terminal.md)
-  * [Unicode](../libraries-and-apis/unicode.md)
 * [ANSI Compatibility](../ansi-compatibility.md)
-* [Drivers](../drivers.md)
+* [Boot process](../boot-process.md)
+
+## Libraries and APIs
+
+* [DataTools](../libraries-and-apis/datatools.md)
+* [Component](../libraries-and-apis/component.md)
+* [Computer](../libraries-and-apis/computer.md)
+* [Filesystem](../libraries-and-apis/filesystem.md)
+* [Raster](../libraries-and-apis/raster.md)
+* [Terminal](../libraries-and-apis/terminal.md)
+* [Unicode](../libraries-and-apis/unicode.md)
+* [Inter-Process Communication](../libraries-and-apis/inter-process-communication.md)
+
+## Kernel
+
+* [Modules](../kernel/drivers.md)
+* [Boot process](../kernel/boot-process.md)
