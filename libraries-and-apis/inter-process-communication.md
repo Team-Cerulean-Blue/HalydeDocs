@@ -1,5 +1,5 @@
 ---
-description: Documentation of the IPC (Inter-Process Communication) library.
+description: Documentation of the IPC (Inter-Process Communication) API.
 icon: satellite-dish
 ---
 
@@ -7,8 +7,7 @@ icon: satellite-dish
 
 IPC allows processes to communicate and share variables with other processes, which the standard sandbox does not allow them to do.
 
-The IPC library does not need to be `require`d. It is in the public runtime environment by default.\
-
+The IPC library does not need to be `require`d. It is in the public runtime environment by default.
 
 * `ipc.shareWithAll(): table`\
   Returns a share table. All data in the table is accessible (though read-only) to all other processes.
@@ -18,4 +17,3 @@ The IPC library does not need to be `require`d. It is in the public runtime envi
   This contains the tables (keyed by PIDs) of processes sharing variables with the current process over IPC. This table should only be indexed.
   * `ipc.shared[pid: number]: table`\
     This contains all variables (if any) shared with the current process from the process with a PID of `pid`.
-

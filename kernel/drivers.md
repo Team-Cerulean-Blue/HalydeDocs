@@ -5,25 +5,37 @@ icon: rectangles-mixed
 
 # Modules
 
-Like any good operating system, Halyde has a driver system. Drivers are small scripts that run on system startup (or in other cases, but that functionality is coming soon) and can depend on other drivers. They are usually to add virtual components to allow the system to interface with some miscellaneous code better.\
-For example, there could be a driver that works with the filesystem on an unmanaged drive and creates a `filesystem` virtual component for each of such drives upon startup.\
-Drivers can also have types based on the type of virtual component they create, for example the aforementioned driver would have the type `filesystem`.
+Halyde's kernel is modular, meaning that it works by relying on modules that can communicate with the kernel and load at any time whenever possible.
 
-To add a driver, simply create a lua file in `/halyde/drivers`. It should return a table with:
+Modules are Lua files located in `/halyde/kernel/modules`  and return a table containing:
 
-* `onStartup: function`: This is where the main code goes that runs on system startup.
-* `type: string`: The type of the driver, that being the type of virtual component it creates. (Optional)
-* `dependencies: table`: The drivers this depends on. This can contain driver names (filenames without the .lua) and driver types. (Optional)
+* `[dependencies: table]`: List of required modules, or required module types. If specified, will start loading these dependencies before using this module.
+* `[type: string]`: The type of the module.
+* `check: function`: A function that returns whether the module is capable of loading in these circumstances.
+* `init: function`: The main code of the module.
+* `exit: function`: Must stop any tasks created by the module, and delete any entries related to it in the public space.
 
-Here is an example snippet of how a driver file could look:
+The `dependencies` and `type` entries aren't important, but keep their values if you are transitioning from a driver (feature removed since v3.0.0).
+
+The user space is exclusively located in `_PUBLIC`, because all modules run in the kernel space. Anything running in user space (shell, libraries, apps...) will have `_PUBLIC` set at its environment.
+
+All modules don't run as tasks, but are directly executed from the kernel. If the code needs to run in the background while the system is running, use the [Task Scheduler](task-scheduler.md) (`_PUBLIC.tsched`).
+
+Here is an example of how a module could look:
 
 ```lua
-local driver = {}
-driver.type = "filesystem"
-driver.dependencies = {"tapeDriver", "drive"}
-driver.onStartup = function()
-  -- This is where the main code goes
+local module = {}
+
+function module.check()
+    return true
+end
+function module.init()
+    _G._PUBLIC.helloworld="Hello, World!"
+    -- running "helloworld" in the lua shell will now return "Hello, World!"
+end
+function module.exit()
+    _G._PUBLIC.helloworld=nil
 end
 
-return driver
+return module
 ```

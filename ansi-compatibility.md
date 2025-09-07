@@ -18,8 +18,8 @@ Command: `\x1b[*m` where \* are the arguments.
 #### [Colors](https://en.wikipedia.org/wiki/ANSI_escape_code#Colors)
 
 * [x] [3-bit and 4-bit color](https://en.wikipedia.org/wiki/ANSI_escape_code#3-bit_and_4-bit) (Arg ID 30-37, 40-47, 90-97, 100-107)
-* [ ] [8-bit color](https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit) (Args `38;5;n`)
-* [ ] [24-bit color](https://en.wikipedia.org/wiki/ANSI_escape_code#24-bit) (Args `38;2;r;g;b`)
+* [x] [8-bit color](https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit) (Args `38;5;n`)
+* [x] [24-bit color](https://en.wikipedia.org/wiki/ANSI_escape_code#24-bit) (Args `38;2;r;g;b`)
 * [ ] [Reverse video](https://en.wikipedia.org/wiki/Reverse_video) or invert (Arg ID 7)
 
 #### Resetting
@@ -40,8 +40,10 @@ Command: `\x1b[*m` where \* are the arguments.
 * [ ] Cursor Horizontal Absolute (`\x1b[*G`)
 * [ ] Cursor Position (`\x1b[*H`)
 * [ ] Horizontal Vertical Position (`\x1b[*f`)
+* [ ] Save Current Cursor Position (`\x1b[s`)
+* [ ] Restore Saved Cursor Position (`\x1b[u`)
 
-It is recommended to change the `termlib.cursorPosX` and `termlib.cursorPosY` values instead of using ANSI escape codes (see [Terminal](libraries-and-apis/terminal.md)).
+It is recommended to use `terminal.setCursorPos` instead of using ANSI escape codes (see [Terminal](libraries-and-apis/terminal.md)).
 
 ***
 
@@ -58,6 +60,6 @@ It is recommended to change the `termlib.cursorPosX` and `termlib.cursorPosY` va
 
 * [x] Bell (`\x07` or `\a` )
 * [ ] Backspace (`\x08`)
-* [ ] Tab (`\x09`)
-* [x] Line Feed (`\x0A` or )
-* [ ] Carriage Return (`\x0D` or )
+* [x] Tab (`\x09` or `\t` )
+* [x] Line Feed (`\x0A` or `\n`)
+* [x] Carriage Return (`\x0D` or `\r`)

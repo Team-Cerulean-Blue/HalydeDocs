@@ -3,10 +3,10 @@
 * [Welcome](GitBookREADME.md)
 * [Table of contents](../SUMMARY.md)
 * [ANSI Compatibility](../ansi-compatibility.md)
-* [Boot process](../boot-process.md)
 
 ## Libraries and APIs
 
+* [Keyboard](../libraries-and-apis/keyboard.md)
 * [DataTools](../libraries-and-apis/datatools.md)
 * [Component](../libraries-and-apis/component.md)
 * [Computer](../libraries-and-apis/computer.md)
@@ -20,3 +20,4 @@
 
 * [Modules](../kernel/drivers.md)
 * [Boot process](../kernel/boot-process.md)
+* [Task Scheduler](../kernel/task-scheduler.md)
