@@ -29,8 +29,10 @@ end
   Finds the full component address of `shortenedAddress`. Returns `nil` and an error message otherwise. `shortenedAddress` must be at least 3 characters long.
 * `component.virtual.add(address: string, type: string, proxy: table)`\
   Adds a virtual component with `address` and `type`. When this component is proxied, returns `proxy`. When this component is invoked, the function is called from `proxy`.
-* `component.virtual.remove(address)`\
+* `component.virtual.remove(address: string)`\
   Virtually removes a component. If this was a real component, it won't show up in `component.list()`, but it will still be able to be proxied and invoked. If this was a virtual component, it will be removed completely.
+* `component.virtual.check(address: string): boolean, table or nil` \
+  Returns `true`, with information of the process that created the component (in the same format as `tched.getCurrentTask`), if the component from the specified address is virtual. Otherwise `false`.
 * `component.doc(address:string, method:string): string`\
   Returns the documentation string for the method with the specified name of the component with the specified address, if any. Note that you can also get this string by using `tostring` on a method in a proxy, for example.
 * `component.methods(address:string):table`\
