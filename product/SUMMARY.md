@@ -21,3 +21,7 @@
 * [Modules](../kernel/drivers.md)
 * [Boot process](../kernel/boot-process.md)
 * [Task Scheduler](../kernel/task-scheduler.md)
+
+## Argentum
+
+* [Package development](../argentum/package-development.md)
